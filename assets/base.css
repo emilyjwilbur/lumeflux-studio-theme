@@ -14,3 +14,8 @@
     width: calc(100% - 80px);
   }
 }
+
+/*HEADER*/
+.header-logo {
+  display: block;
+}
