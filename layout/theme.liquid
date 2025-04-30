@@ -10,6 +10,7 @@
       :root {
         --bg-color: {{ settings.background_color }};
         --text-color: {{ settings.text_color }};
+        --border-color: {{ settings.border_color }};
       }
     </style>
     {{ 'base.css' | asset_url | stylesheet_tag }}

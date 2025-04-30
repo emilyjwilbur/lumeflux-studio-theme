@@ -84,6 +84,15 @@ li {
 span.header-hamburger-bar {
   margin-top: 6px;
 }
+.header-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}
 .header-nav {
   position: fixed;
   top: 0;
@@ -95,12 +104,11 @@ span.header-hamburger-bar {
   width: 300px;
   z-index: 10;
 }
-.header-nav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9;
+.header-nav-item {
+  border-bottom: 1px solid var(--border-color);
+}
+.header-nav-anchor {
+  display: block;
+  padding: 20px;
+  color: var(--text-color);
 }
