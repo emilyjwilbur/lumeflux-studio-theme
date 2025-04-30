@@ -1,25 +1,5 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "hero_HMeUqL": {
-      "type": "hero",
-      "name": "Hero Section",
-      "settings": {
-        "hero_title": "Lumeflux Studio",
-        "hero_description": "This is my description",
-        "hero_background_image": "shopify://shop_images/model-laughs-barefoot.jpg",
-        "hero_cta_text": "Shop Now",
-        "hero_cta_link": "shopify://collections"
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -42,39 +22,37 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["heading", "button"],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "image_behavior": "none",
         "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
         "show_text_box": false,
+        "image_behavior": "none",
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
         "columns_desktop": 4,
-        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": false,
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -82,15 +60,10 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
-  "order": [
-    "hero_HMeUqL",
-    "image_banner",
-    "featured_collection"
-  ]
+  "order": ["image_banner", "featured_collection"]
 }
