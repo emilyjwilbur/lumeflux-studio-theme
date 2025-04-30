@@ -92,6 +92,7 @@ span.header-hamburger-bar {
   overflow: auto;
   background: var(--bg-color);
   max-width: 300px;
+  width: 300px;
   z-index: 10;
 }
 .header-nav-overlay {
@@ -101,4 +102,5 @@ span.header-hamburger-bar {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
 }
