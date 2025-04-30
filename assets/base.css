@@ -5,3 +5,7 @@
 .fadeOn {
   transition: left 0s, opacity 0.4s;
 }
+.width {
+    max-width: {{ settings.page_width }}px;
+    width: calc(100% - 40px);
+  }
