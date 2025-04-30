@@ -8,9 +8,6 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
-    "name": "Lumeflux"
-  },
-  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
@@ -59,13 +56,13 @@
             "type": "color",
             "id": "text",
             "label": "t:settings_schema.colors.settings.text.label",
-            "default": "#000000"
+            "default": "#121212"
           },
           {
             "type": "color",
             "id": "button",
             "label": "t:settings_schema.colors.settings.button_background.label",
-            "default": "#FF6347"
+            "default": "#121212"
           },
           {
             "type": "color",
