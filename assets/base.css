@@ -14,6 +14,19 @@
     width: calc(100% - 80px);
   }
 }
+/*
+RESET
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+svg {
+  display: block;
+  width: 100%;
+}
 
 /*HEADER*/
 .header-logo {
