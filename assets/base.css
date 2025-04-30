@@ -26,6 +26,19 @@ svg {
   display: block;
   width: 100%;
 }
+button,
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
 a {
   text-decoration: none;
 }
@@ -51,4 +64,19 @@ li {
 
 .header-logo {
   display: block;
+}
+.header-hamburger {
+  width: 32px;
+  display: block;
+}
+.header-hamburger.bar {
+  height: 1px;
+  width: 100%;
+  background: var(--text-color);
+  display: block;
+  border-radius: 2px;
+
+  & + & {
+    margin-top: 5px;
+  }
 }

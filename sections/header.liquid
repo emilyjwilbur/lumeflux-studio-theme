@@ -2,6 +2,11 @@
     <a href="/" class="header-logo">
     <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
     </a>
+    <button class="header-hamburger">
+        <span class="button-hamburger-bar"></span>
+        <span class="button-hamburger-bar"></span>
+        <span class="button-hamburger-bar"></span>
+    </button>
 
     <ul class="header-nav">
         {% for link in section.settings.navigation.links %}
