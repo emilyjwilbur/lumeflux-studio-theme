@@ -1,8 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.fadeOff {
+  transition: left 0s 0.4s, opacity 0.4s;
 }
-body {
-  background-color: #ffffff;
+
+.fadeOn {
+  transition: left 0s, opacity 0.4s;
 }

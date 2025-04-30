@@ -6,5 +6,19 @@
     "theme_author": "Emily Wilbur",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
+  },
+  {
+    "name": "Page Settings",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "label": "Page Width",
+        "default": 1200,
+        "min": 800,
+        "max": 1600,
+        "step": 50
+      }
+    ]
   }
 ]
