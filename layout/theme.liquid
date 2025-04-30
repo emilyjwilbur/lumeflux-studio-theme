@@ -7,7 +7,12 @@
     <title>Lumeflux Studio</title>
     {{ content_for_header }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
-
+    <style>
+      :root {
+        --bg-color: {{ settings.background_color }};
+        --text-color: {{ settings.text_color }};
+      }
+    </style>
 
   </head>
 <body>
