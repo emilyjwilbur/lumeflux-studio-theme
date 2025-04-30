@@ -25,6 +25,11 @@
     max-width: {{ section.settings.logo_width }}px;
 }
 </style>
+<script>
+    document.queryselection('.header-hamburger').addeventListener('click',() => {
+    document.querySelector('.header').classList.toggle('.nav-active')
+    })
+</script>
 {% schema %}
 {
 "name": "Header",
