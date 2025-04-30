@@ -87,11 +87,23 @@ span.header-hamburger-bar {
 .header-nav-overlay {
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9;
+  opacity: 0;
+  left: -100%;
+  transition: left 0s 0.4s, opacity 0.4s;
+}
+.header-nav-overlay .nav-active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+  opacity: 1;
+  transition: left 0s, opacity 0.4s;
 }
 .header-nav {
   position: fixed;
@@ -103,7 +115,22 @@ span.header-hamburger-bar {
   max-width: 300px;
   width: 300px;
   z-index: 10;
+  transform: translateX(-100%);
+  transition: 0.4s transform;
 }
+.header-nav .nav-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  background: var(--bg-color);
+  max-width: 300px;
+  width: 300px;
+  z-index: 10;
+  transform: none;
+}
+
 .header-nav-item {
   border-bottom: 1px solid var(--border-color);
 }
