@@ -61,6 +61,11 @@ li {
 .header {
   background: var(--bg-color);
 }
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .header-logo {
   display: block;
@@ -78,4 +83,22 @@ li {
 }
 span.header-hamburger-bar {
   margin-top: 6px;
+}
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  background: var(--bg-color);
+  max-width: 300px;
+  z-index: 10;
+}
+.header-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
