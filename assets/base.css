@@ -5,15 +5,7 @@
 .fadeOn {
   transition: left 0s, opacity 0.4s;
 }
-.width {
-  max-width: 1200px;
-  width: calc(100% - 40px);
-  margin: 0 auto;
 
-  @media (min-width: 960px) {
-    width: calc(100% - 80px);
-  }
-}
 /*
 RESET
 */
@@ -26,6 +18,17 @@ img,
 svg {
   display: block;
   width: 100%;
+}
+
+/*PAGE STYLING*/
+.width {
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+
+  @media (min-width: 960px) {
+    width: calc(100% - 80px);
+  }
 }
 
 /*HEADER*/
