@@ -1,0 +1,53 @@
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Hero Heading",
+      "default": "Welcome to Our Store"
+    },
+    {
+      "type": "text",
+      "id": "hero_subheading",
+      "label": "Hero Subheading",
+      "default": "Browse our latest collection"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="hero-section" style="background-image: url('{{ settings.hero_image | img_url: '1600x' }}');">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1 class="hero-heading">{{ settings.hero_heading }}</h1>
+      <p class="hero-subheading">{{ settings.hero_subheading }}</p>
+      <a href="{{ settings.hero_button_url }}" class="hero-button">{{ settings.hero_button_text }}</a>
+    </div>
+  </div>
+</section>
