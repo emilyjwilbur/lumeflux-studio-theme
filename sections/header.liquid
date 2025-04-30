@@ -4,6 +4,14 @@
     <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
     </a>
 
+    <ul class="header-nav">
+        {% for link in section.settings.navigation.links %}
+            <li><a href="{{link.url}}">
+            {{ link.title }}    
+            </a></li>
+            {% endfor %}
+    </ul>
+
 </div>
 <style>
 .header-logo{
