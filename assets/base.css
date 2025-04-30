@@ -45,6 +45,10 @@ li {
 }
 
 /*HEADER*/
+.header {
+  background: var(--bg-color);
+}
+
 .header-logo {
   display: block;
 }
