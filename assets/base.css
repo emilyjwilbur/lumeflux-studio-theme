@@ -69,13 +69,13 @@ li {
   width: 32px;
   display: block;
 }
-.button-hamburger.bar {
+.header-hamburger-bar {
   height: 1px;
   width: 100%;
   background: var(--text-color);
   display: block;
   border-radius: 2px;
 }
-span.button-hamburger-bar {
+span.header-hamburger-bar {
   margin-top: 6px;
 }
