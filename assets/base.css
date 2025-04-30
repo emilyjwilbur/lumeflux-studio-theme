@@ -75,8 +75,7 @@ li {
   background: var(--text-color);
   display: block;
   border-radius: 2px;
-
-  & + & {
-    margin-top: 5px;
-  }
+}
+span.button-hamburger-bar {
+  margin-top: 5px;
 }
