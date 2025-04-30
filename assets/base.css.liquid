@@ -8,4 +8,9 @@
   .width {
       max-width: {{ settings.page_width }}px;
       width: calc(100% - 40px);
+      margin: 0 auto;
+
+      @media (min-width:960px){
+        width: calc(100% - 80px);
+      }
     }
