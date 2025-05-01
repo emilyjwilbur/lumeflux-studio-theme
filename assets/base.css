@@ -70,7 +70,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  width: 100%; /* Ensures the container fills the available space */
 }
 .header-left,
 .header-center,
@@ -105,6 +105,7 @@ li {
 
 .header-logo {
   display: block;
+  margin: 0 auto;
 }
 .header-hamburger {
   width: 32px;
@@ -164,9 +165,10 @@ span.header-hamburger-bar {
 
   @media (min-width: 1200px) {
     position: static;
-    display: inline-flex;
     align-items: center;
-    gap: 80px;
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
     width: auto;
     max-width: none;
     height: auto;
