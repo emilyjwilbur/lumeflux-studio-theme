@@ -1,62 +1,78 @@
 <div class="width">
-    <div class="header-flex">
-    <a href="/" class="header-logo">
-    <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
-    </a>
-    <button class="header-hamburger">
-        <span class="header-hamburger-bar"></span>
-        <span class="header-hamburger-bar"></span>
-        <span class="header-hamburger-bar"></span>
-    </button>
-
-    <ul class="header-nav">
-        {% for link in section.settings.navigation.links %}
+    <header class="header">
+      <div class="header-flex">
+        <!-- Left: Navigation -->
+        <nav class="header-nav">
+          {% for link in section.settings.navigation.links %}
             <li class="header-nav-item">
-                <a class="header-nav-anchor" href="{{link.url}}">
-            {{ link.title }}    
-            </a>
-        {%  if link.links != blank %}
-            <ul class="header-sub">
-            {% for child in link.links %}
-                <li class="header-sub-item">
-                    <a href="{{ child.url }}" class="header-sub-anchor">
+              <a class="header-nav-anchor" href="{{ link.url }}">
+                {{ link.title }}
+              </a>
+              {% if link.links != blank %}
+                <ul class="header-sub">
+                  {% for child in link.links %}
+                    <li class="header-sub-item">
+                      <a href="{{ child.url }}" class="header-sub-anchor">
                         {{ child.title }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        {%  endif %}
-        
-        </li>
-            {% endfor %}
-    </ul>
-</div>
-</div>
-<div class="header-nav-overlay"></div>
-<style>
-    .header{
-    padding: {{ section.settings.padding }}px 0;
-}
-.header-logo{
-    max-width: {{ section.settings.logo_width }}px;
-}
-</style>
-<script>
-    document.querySelector('.header-hamburger').addEventListener('click', () => {
-        document.querySelector('.header').classList.toggle('nav-active');
-      });
-      document.querySelector('.header-nav-overlay').addEventListener('click', () => {
-        document.querySelector('.header').classList.remove('nav-active');
-      });
-      
-</script>
-{% schema %}
-{
-"name": "Header",
-"tag": "header",
-"class":"header",
-"settings": [
-    {
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </nav>
+  
+        <!-- Center: Logo -->
+        <a href="/" class="header-logo">
+          <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
+        </a>
+  
+        <!-- Right: Hamburger (Mobile Only) -->
+        <button class="header-hamburger" aria-label="Toggle menu">
+          <span class="header-hamburger-bar"></span>
+          <span class="header-hamburger-bar"></span>
+          <span class="header-hamburger-bar"></span>
+        </button>
+      </div>
+    </header>
+  </div>
+  
+  <!-- Overlay -->
+  <div class="header-nav-overlay"></div>
+  
+  <!-- Inline Styles -->
+  <style>
+    .header {
+      padding: {{ section.settings.padding }}px 0;
+    }
+    .header-logo {
+      max-width: {{ section.settings.logo_width }}px;
+    }
+  </style>
+  
+  <!-- Script -->
+  <script>
+    const header = document.querySelector('.header');
+    const hamburger = document.querySelector('.header-hamburger');
+    const overlay = document.querySelector('.header-nav-overlay');
+  
+    hamburger.addEventListener('click', () => {
+      header.classList.toggle('nav-active');
+    });
+  
+    overlay.addEventListener('click', () => {
+      header.classList.remove('nav-active');
+    });
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Header",
+    "tag": "header",
+    "class": "header",
+    "settings": [
+      {
         "type": "range",
         "id": "padding",
         "label": "Header Height",
@@ -65,11 +81,11 @@
         "max": 100,
         "step": 1
       },
-    {
-    "type": "image_picker",
-    "id": "logo",
-    "label": "Logo"
-    }, 
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
       {
         "type": "range",
         "id": "logo_width",
@@ -84,7 +100,8 @@
         "id": "navigation",
         "label": "Navigation menu",
         "default": "main-menu"
-    }
-]
-}
-{% endschema %}
+      }
+    ]
+  }
+  {% endschema %}
+  
