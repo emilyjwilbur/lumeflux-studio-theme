@@ -5,8 +5,15 @@
         <ul class="header-nav">
             {% for link in section.settings.navigation.links %}
                 <li class="header-nav-item">
-                  <a class="header-nav-anchor" href="{{ link.url }}">{{ link.title }}</a>
+                    <a class="header-nav-anchor" href="{{ link.url }}">
+                        {{ link.title }}
+                        {% if link.links != blank %}
+                          <!-- Add the caret next to items with dropdowns -->
+                          <span class="caret"></span>
+                        {% endif %}
+                      </a>
                   {% if link.links != blank %}
+                    
                     <ul class="header-sub">
                         {% for child in link.links %}
                             <li class="header-sub-item">
