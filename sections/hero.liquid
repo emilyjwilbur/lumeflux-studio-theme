@@ -1,39 +1,38 @@
-<div class="width"><section class="hero-overlap">
-    <div class="hero-left">
+<div class="width">
+    <section class="hero-overlap">
+      <div class="hero-left">
         <h1 class="hero-heading" style="font-size: {% if section.settings.heading_font_size == 'small' %} 1rem {% elsif section.settings.heading_font_size == 'medium' %} 2.1rem {% else %} 3rem {% endif %};">
-            {{ section.settings.heading }}
-          </h1>
-      <p>{{ section.settings.subheading }}</p>
-      <a href="{{ section.settings.button_link }}" class="hero-button">
-        {{ section.settings.button_label }}
-      </a>
-    </div>
-  
-    <div class="hero-right">
-      <!-- This div is now only structural -->
-    </div>
-  
-    {% if section.settings.right_image != blank %}
-      <img 
-        width="" height=""
-        src="{{ section.settings.right_image | img_url: 'master' }}" 
-        alt="Right Hero Image" 
-        class="right-image"
-      >
-    {% endif %}
-  
-    {% if section.settings.circle_image != blank %}
-      <div class="circle-wrapper">
-        <img 
-          width="" height=""
-          src="{{ section.settings.circle_image | img_url: 'master' }}" 
-          alt="Circle Image" 
-          class="circle-image"
-        >
+          {{ section.settings.heading }}
+        </h1>
+        <p>{{ section.settings.subheading }}</p>
+        <a href="{{ section.settings.button_link }}" class="hero-button">
+          {{ section.settings.button_label }}
+        </a>
       </div>
-    {% endif %}
-  </section>
-</div>
+  
+      <div class="hero-right">
+        <!-- This div is now only structural -->
+      </div>
+    
+      {% if section.settings.right_image != blank %}
+        <img width="" height=""
+          src="{{ section.settings.right_image | img_url: 'master' }}" 
+          alt="Right Hero Image" 
+          class="right-image"
+        >
+      {% endif %}
+    
+      {% if section.settings.circle_image != blank %}
+        <div class="circle-wrapper">
+          <img width="" height=""
+            src="{{ section.settings.circle_image | img_url: 'master' }}" 
+            alt="Circle Image" 
+            class="circle-image"
+          >
+        </div>
+      {% endif %}
+    </section>
+  </div>
   
 
 
