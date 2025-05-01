@@ -204,29 +204,6 @@ span.header-hamburger-bar {
     left: -9999px;
     transition: left 0s 0.4s, opacity 0.4s;
   }
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    top: 0;
-    left: 50%;
-
-    z-index: -1;
-  }
-  &:after {
-    width: 45px;
-    height: 16px;
-    background: var(--bg-color);
-    top: 0;
-    left: 50%;
-    margin-left: -22px;
-    content: "";
-    position: absolute;
-  }
 
   .header-nav-anchor:hover + &,
   &:hover {
