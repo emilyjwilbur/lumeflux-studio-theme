@@ -235,3 +235,16 @@ span.header-hamburger-bar {
     color: var(--text-color);
   }
 }
+
+.header-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-action-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}

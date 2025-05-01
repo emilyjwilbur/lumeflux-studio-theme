@@ -1,37 +1,51 @@
 <div class="width">
     <div class="header-flex">
-    <a href="/" class="header-logo">
-    <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
-    </a>
-    <button class="header-hamburger">
+      <!-- Logo (left) -->
+      <a href="/" class="header-logo">
+        <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
+      </a>
+  
+      <!-- Hamburger (mobile only) -->
+      <button class="header-hamburger" aria-label="Toggle menu">
         <span class="header-hamburger-bar"></span>
         <span class="header-hamburger-bar"></span>
         <span class="header-hamburger-bar"></span>
-    </button>
-
-    <ul class="header-nav">
+      </button>
+  
+      <!-- Navigation (center) -->
+      <ul class="header-nav">
         {% for link in section.settings.navigation.links %}
-            <li class="header-nav-item">
-                <a class="header-nav-anchor" href="{{link.url}}">
-            {{ link.title }}    
+          <li class="header-nav-item">
+            <a class="header-nav-anchor" href="{{ link.url }}">
+              {{ link.title }}
             </a>
-        {%  if link.links != blank %}
-            <ul class="header-sub">
-            {% for child in link.links %}
-                <li class="header-sub-item">
+            {% if link.links != blank %}
+              <ul class="header-sub">
+                {% for child in link.links %}
+                  <li class="header-sub-item">
                     <a href="{{ child.url }}" class="header-sub-anchor">
-                        {{ child.title }}
+                      {{ child.title }}
                     </a>
-                </li>
+                  </li>
                 {% endfor %}
-            </ul>
-        {%  endif %}
-        
-        </li>
-            {% endfor %}
-    </ul>
-</div>
-</div>
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+  
+      <!-- Optional Login + Cart Buttons (right of nav) -->
+      <div class="header-actions">
+        {% if section.settings.show_login %}
+          <a href="/account/login" class="header-action-link">Login</a>
+        {% endif %}
+        {% if section.settings.show_cart %}
+          <a href="/cart" class="header-action-link">Cart</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="header-nav-overlay"></div>
 <div class="header-nav-overlay"></div>
 <style>
     .header{
@@ -84,7 +98,19 @@
         "id": "navigation",
         "label": "Navigation menu",
         "default": "main-menu"
-    }
+    },
+    {
+        "type": "checkbox",
+        "id": "show_login",
+        "label": "Show Login Button",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_cart",
+        "label": "Show Cart Button",
+        "default": true
+      }
 ]
 }
 {% endschema %}
