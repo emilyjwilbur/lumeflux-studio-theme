@@ -1,26 +1,29 @@
 <div class="width">
     <header class="header">
       <div class="header-flex">
+        
         <!-- Left: Navigation -->
         <nav class="header-nav">
-          {% for link in section.settings.navigation.links %}
-            <li class="header-nav-item">
-              <a class="header-nav-anchor" href="{{ link.url }}">
-                {{ link.title }}
-              </a>
-              {% if link.links != blank %}
-                <ul class="header-sub">
-                  {% for child in link.links %}
-                    <li class="header-sub-item">
-                      <a href="{{ child.url }}" class="header-sub-anchor">
-                        {{ child.title }}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
+          <ul>
+            {% for link in section.settings.navigation.links %}
+              <li class="header-nav-item">
+                <a class="header-nav-anchor" href="{{ link.url }}">
+                  {{ link.title }}
+                </a>
+                {% if link.links != blank %}
+                  <ul class="header-sub">
+                    {% for child in link.links %}
+                      <li class="header-sub-item">
+                        <a href="{{ child.url }}" class="header-sub-anchor">
+                          {{ child.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
         </nav>
   
         <!-- Center: Logo -->
@@ -28,20 +31,22 @@
           <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
         </a>
   
-        <!-- Right: Hamburger (Mobile Only) -->
-        <button class="header-hamburger" aria-label="Toggle menu">
-          <span class="header-hamburger-bar"></span>
-          <span class="header-hamburger-bar"></span>
-          <span class="header-hamburger-bar"></span>
-        </button>
+        <!-- Right: Login + Cart -->
+        <div class="header-actions">
+          <a href="/account/login" class="header-action-link">Login</a>
+          <a href="/cart" class="header-action-link">Cart</a>
+          <button class="header-hamburger" aria-label="Toggle menu">
+            <span class="header-hamburger-bar"></span>
+            <span class="header-hamburger-bar"></span>
+            <span class="header-hamburger-bar"></span>
+          </button>
+        </div>
       </div>
     </header>
   </div>
   
-  <!-- Overlay -->
   <div class="header-nav-overlay"></div>
   
-  <!-- Inline Styles -->
   <style>
     .header {
       padding: {{ section.settings.padding }}px 0;
@@ -49,9 +54,37 @@
     .header-logo {
       max-width: {{ section.settings.logo_width }}px;
     }
+  
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .header-nav ul {
+      display: flex;
+      gap: 32px;
+    }
+  
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  
+    .header-action-link {
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 16px;
+    }
+  
+    @media (min-width: 1200px) {
+      .header-hamburger {
+        display: none;
+      }
+    }
   </style>
   
-  <!-- Script -->
   <script>
     const header = document.querySelector('.header');
     const hamburger = document.querySelector('.header-hamburger');
