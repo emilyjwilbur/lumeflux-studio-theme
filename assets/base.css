@@ -188,7 +188,8 @@ span.header-hamburger-bar {
     transition: left 0s 0.4s, opacity 0.4s;
   }
 
-  .header-nav-anchor:hover + & {
+  .header-nav-anchor:hover + &,
+  &:hover {
     @media (min-width: 1200px) {
       left: 50%;
       opacity: 1;
