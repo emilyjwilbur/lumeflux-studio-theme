@@ -8,12 +8,21 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "Home page",
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "heading": "Radiant Skincare for Every Skin",
+        "subheading": "Glow Naturally with Lumeflux",
+        "circle_image": "shopify://shop_images/soapy-texture.jpg",
+        "right_image": "shopify://shop_images/two-hands-running-in-skincare-treatment.jpg",
+        "button_link": "",
+        "button_label": "Shop Lumeflux",
+        "heading_font_size": "large"
+      }
     }
   },
-  "order": ["hero"]
+  "order": [
+    "hero"
+  ]
 }
