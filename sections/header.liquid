@@ -19,8 +19,8 @@
             <ul class="header-sub">
             {% for child in link.links %}
                 <li class="header-sub-item">
-                    <a href="{% child.url %}" class="header-sub-anchor">
-                        {% child.title %}
+                    <a href="{{ child.url }}" class="header-sub-anchor">
+                        {{ child.title }}
                     </a>
                 </li>
                 {% endfor %}
