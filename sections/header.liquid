@@ -75,6 +75,13 @@
       document.querySelector('.header-nav-overlay').addEventListener('click', () => {
         document.querySelector('.header').classList.remove('nav-active');
       });
+      document.querySelectorAll('.header-sub-sub-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          const item = toggle.closest('.header-sub-item');
+          item.classList.toggle('active');
+        });
+      });
       
 </script>
 {% schema %}
