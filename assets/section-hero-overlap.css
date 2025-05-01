@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .hero-overlap {
     flex-direction: row;
   }
@@ -24,7 +24,7 @@
   min-height: 100vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .hero-overlap-content {
     flex-direction: row;
   }
