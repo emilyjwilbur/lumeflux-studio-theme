@@ -10,19 +10,20 @@
                     <ul class="header-sub">
                         {% for child in link.links %}
                             <li class="header-sub-item">
-                                <a href="{{ child.url }}">{{ child.title }}</a>
+                                <a href="{{ child.url }}" class="header-sub-anchor">{{ child.title }}</a>
                               
                                 {% if child.links != blank %}
-                                  <button class="header-sub-sub-toggle" aria-label="Toggle sub menu">▼</button>
+                                  <button class="header-sub-sub-toggle" aria-label="Toggle submenu">▼</button>
                                   <ul class="header-sub-sub">
                                     {% for grandchild in child.links %}
                                       <li class="header-sub-sub-item">
-                                        <a href="{{ grandchild.url }}">{{ grandchild.title }}</a>
+                                        <a href="{{ grandchild.url }}" class="header-sub-sub-anchor">{{ grandchild.title }}</a>
                                       </li>
                                     {% endfor %}
                                   </ul>
                                 {% endif %}
                               </li>
+                              
                               
                               
                           {% endfor %}
@@ -83,14 +84,14 @@
               e.preventDefault();
               const parentItem = toggle.closest(".header-sub-item");
     
-              // Close others
+              // Close other open sub-sub-menus
               document.querySelectorAll(".header-sub-item").forEach((item) => {
                 if (item !== parentItem) {
                   item.classList.remove("sub-sub-open");
                 }
               });
     
-              // Toggle current
+              // Toggle this one
               parentItem.classList.toggle("sub-sub-open");
             });
           });

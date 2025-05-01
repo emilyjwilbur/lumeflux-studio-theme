@@ -308,15 +308,15 @@ span.header-hamburger-bar {
 
   .header-sub-sub {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 220px;
+    top: 0;
+    left: 100%;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     background: var(--bg-color);
     border-radius: 20px;
     padding: 20px;
+    width: 220px;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease;
     z-index: 1000;
@@ -335,5 +335,10 @@ span.header-hamburger-bar {
     background: none;
     border: none;
     color: var(--text-color);
+    transform: rotate(-90deg); /* Right-facing arrow ▼ -> ▶ */
+  }
+
+  .header-sub-sub-item + .header-sub-sub-item {
+    margin-top: 10px;
   }
 }
