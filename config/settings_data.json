@@ -196,12 +196,12 @@
       "hero": {
         "type": "hero",
         "settings": {
-          "heading": "Your Revival of Health",
-          "subheading": "Transform your health starting at its foundation...",
+          "heading": "Radiant Skincare for Every Skin",
+          "subheading": "Glow Naturally with Lumeflux.",
           "circle_image": "shopify://shop_images/plufow-le-studio-zyaPg5b6M5I-unsplash.jpg",
           "right_image": "shopify://shop_images/two-hands-running-in-skincare-treatment.jpg",
           "button_link": "",
-          "button_label": "Shop ARMRA",
+          "button_label": "Shop Lumeflux",
           "heading_font_size": "large"
         }
       }
