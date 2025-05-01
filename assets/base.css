@@ -187,6 +187,18 @@ span.header-hamburger-bar {
     left: -9999px;
     transition: left 0s 0.4s, opacity 0.4s;
   }
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 0;
+    left: 50%;
+  }
 
   .header-nav-anchor:hover + &,
   &:hover {
