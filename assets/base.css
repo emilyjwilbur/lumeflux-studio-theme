@@ -78,6 +78,10 @@ li {
 .header-hamburger {
   width: 32px;
   display: block;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
 }
 .header-hamburger-bar {
   height: 1px;
@@ -148,6 +152,11 @@ span.header-hamburger-bar {
 .header-nav-item {
   padding: 20px;
   border-bottom: 1px solid var(--border-color);
+
+  @media (min-width: 1200px) {
+    border: none;
+    padding: 0;
+  }
 }
 .header-nav-anchor {
   display: block;
