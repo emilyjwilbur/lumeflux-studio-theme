@@ -1,3 +1,17 @@
+.hero-overlap {
+  position: relative; /* Needed to anchor absolute circle */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-overlap {
+    flex-direction: row;
+  }
+}
+
 .hero-overlap-section {
   width: 100%;
   overflow: hidden;
