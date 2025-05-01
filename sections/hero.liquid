@@ -1,27 +1,24 @@
-<section class="hero-overlap-section">
-    <div class="hero-overlap-content">
-      <div class="hero-left">
-        <h1>{{ section.settings.heading }}</h1>
-        <p>{{ section.settings.subheading }}</p>
-        <a href="{{ section.settings.button_link }}" class="hero-button">
-          {{ section.settings.button_label }}
-        </a>
-      </div>
-  
-      <div class="hero-right">
-        {% if section.settings.right_image != blank %}
-          <img width="" height="" src="{{ section.settings.right_image | img_url: 'master' }}" alt="Hero Image" class="hero-image-right" />
-        {% endif %}
-  
-        {% if section.settings.circle_image != blank %}
-          <div class="circle-wrapper">
-            <img width="" height="" src="{{ section.settings.circle_image | img_url: 'master' }}" alt="Circle Image" class="circle-image" />
-          </div>
-        {% endif %}
-      </div>
+<section class="hero-overlap">
+    <div class="hero-left">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.subheading }}</p>
+      <a href="{{ section.settings.button_link }}" class="hero-button">
+        {{ section.settings.button_label }}
+      </a>
     </div>
-  </section>
   
+    <div class="hero-right">
+      {% if section.settings.right_image != blank %}
+        <img width="" height="" src="{{ section.settings.right_image | img_url: 'master' }}" alt="Right Hero Image" class="right-image">
+      {% endif %}
+    </div>
+  
+    {% if section.settings.circle_image != blank %}
+      <div class="circle-wrapper">
+        <img width="" height="" src="{{ section.settings.circle_image | img_url: 'master' }}" alt="Circle Image" class="circle-image">
+      </div>
+    {% endif %}
+  </section>
   
 
 
