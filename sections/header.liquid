@@ -89,6 +89,30 @@
      
     }
   }
+   /* .header-sub-sub styling for desktop */
+   .header-sub-sub {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 10px); /* Position the sub-sub menu to the right of the parent */
+    background: {{ settings.header-sub | default: '#c7d8d5' }}; /* Same background as .header-sub */
+    border-radius: 20px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+  }
+
+  /* Make the sub-sub menu visible on hover */
+  .header-sub-item:hover .header-sub-sub,
+  .header-sub-sub:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
 </style>
 <script>
     document.querySelector('.header-hamburger').addEventListener('click', () => {
