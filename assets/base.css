@@ -255,17 +255,17 @@ span.header-hamburger-bar {
   }
 }
 
-.header-action {
-  font-size: 18px;
-  color: var(--text-color);
-  text-decoration: none;
-}
 .header-actions {
   display: flex;
   gap: 24px;
   align-items: center;
 }
-
+.header-action {
+  font-size: 16px;
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .header-action-link {
   font-size: 16px;
   font-weight: 500;
