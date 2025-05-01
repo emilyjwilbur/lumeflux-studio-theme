@@ -292,35 +292,3 @@ span.header-hamburger-bar {
     justify-content: space-between;
   }
 }
-@media (min-width: 1200px) {
-  .header-sub-sub {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background: var(--bg-color);
-    border-radius: 12px;
-    padding: 10px;
-    display: none;
-    white-space: nowrap;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-  }
-
-  .header-sub-item:hover .header-sub-sub {
-    display: block;
-  }
-
-  .header-sub-sub-item + .header-sub-sub-item {
-    margin-top: 5px;
-  }
-
-  .header-sub-sub-anchor {
-    color: var(--medium-text-color);
-    transition: 0.3s color;
-    display: inline-block;
-  }
-
-  .header-sub-sub-anchor:hover {
-    color: var(--text-color);
-  }
-}
