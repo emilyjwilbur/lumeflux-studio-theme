@@ -1,12 +1,12 @@
 .hero-overlap {
-  position: relative; /* Needed to anchor absolute circle */
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .hero-overlap {
     flex-direction: row;
   }
@@ -24,7 +24,7 @@
   min-height: 100vh;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
   .hero-overlap-content {
     flex-direction: row;
   }
@@ -32,14 +32,18 @@
 
 .hero-left {
   position: relative;
-  flex: 1;
-  padding: 2rem;
   z-index: 2;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 50vw;
+  background: white;
+  padding: 2rem;
+  width: 100vw;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero-left {
+    flex: 1;
+    width: auto;
+    max-width: none;
+  }
 }
 
 .hero-left h1 {
@@ -68,13 +72,24 @@
   cursor: pointer;
 }
 .right-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 50vw;
+  position: relative; /* default: flow in doc */
+  width: 100vw; /* full width */
+  height: auto; /* scales naturally */
   object-fit: cover;
-  z-index: 0;
+  z-index: 1;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .right-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
 }
 .hero-right {
   position: relative;
