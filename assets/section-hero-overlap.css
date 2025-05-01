@@ -31,12 +31,13 @@
 }
 
 .hero-left {
+  position: relative;
   flex: 1;
   padding: 2rem;
+  z-index: 1;
+  background: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   justify-content: center;
 }
 
@@ -65,9 +66,23 @@
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
-
+.right-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  z-index: 0;
+}
 .hero-right {
+  position: relative;
   flex: 1;
+  padding: 2rem;
+  z-index: 1;
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;

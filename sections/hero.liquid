@@ -8,17 +8,30 @@
     </div>
   
     <div class="hero-right">
-      {% if section.settings.right_image != blank %}
-        <img width="" height="" src="{{ section.settings.right_image | img_url: 'master' }}" alt="Right Hero Image" class="right-image">
-      {% endif %}
+      <!-- This div is now only structural -->
     </div>
+  
+    {% if section.settings.right_image != blank %}
+      <img 
+        width="" height=""
+        src="{{ section.settings.right_image | img_url: 'master' }}" 
+        alt="Right Hero Image" 
+        class="right-image"
+      >
+    {% endif %}
   
     {% if section.settings.circle_image != blank %}
       <div class="circle-wrapper">
-        <img width="" height="" src="{{ section.settings.circle_image | img_url: 'master' }}" alt="Circle Image" class="circle-image">
+        <img 
+          width="" height=""
+          src="{{ section.settings.circle_image | img_url: 'master' }}" 
+          alt="Circle Image" 
+          class="circle-image"
+        >
       </div>
     {% endif %}
   </section>
+  
   
 
 
