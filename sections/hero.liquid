@@ -1,34 +1,27 @@
-<section class="w-full flex flex-col md:flex-row items-center md:items-stretch min-h-screen relative overflow-hidden">
-    <div class="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16 bg-white z-10">
-      <h1 class="text-4xl md:text-5xl font-serif italic">
-        {{ section.settings.heading | escape }}
-      </h1>
-      <p class="mt-4 text-lg text-gray-700">
-        {{ section.settings.subheading | escape }}
-      </p>
-      <a href="{{ section.settings.button_link }}" class="mt-6 inline-block bg-black text-white px-6 py-3 uppercase tracking-wide">
-        {{ section.settings.button_label | escape }}
-      </a>
-    </div>
+<section class="hero-overlap-section">
+    <div class="hero-overlap-content">
+      <div class="hero-left">
+        <h1>{{ section.settings.heading }}</h1>
+        <p>{{ section.settings.subheading }}</p>
+        <a href="{{ section.settings.button_link }}" class="hero-button">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
   
-    <div class="w-full md:w-1/2 relative bg-[#f8e5db]">
-      {% if section.settings.right_image != blank %}
-        <img width="" height=""
-          src="{{ section.settings.right_image | img_url: 'master' }}" 
-          alt="Hero Image" 
-          class="absolute right-0 bottom-0 h-full object-cover z-0" />
-      {% endif %}
+      <div class="hero-right">
+        {% if section.settings.right_image != blank %}
+          <img width="" height="" src="{{ section.settings.right_image | img_url: 'master' }}" alt="Hero Image" class="hero-image-right" />
+        {% endif %}
   
-      {% if section.settings.circle_image != blank %}
-        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[200px] md:w-[300px] aspect-square rounded-full overflow-hidden border-[6px] border-white shadow-xl">
-          <img width="" height=""
-            src="{{ section.settings.circle_image | img_url: 'master' }}" 
-            alt="Circle Image" 
-            class="w-full h-full object-cover" />
-        </div>
-      {% endif %}
+        {% if section.settings.circle_image != blank %}
+          <div class="circle-wrapper">
+            <img width="" height="" src="{{ section.settings.circle_image | img_url: 'master' }}" alt="Circle Image" class="circle-image" />
+          </div>
+        {% endif %}
+      </div>
     </div>
   </section>
+  
   
 
 

@@ -1,0 +1,81 @@
+.hero-overlap-section {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.hero-overlap-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-overlap-content {
+    flex-direction: row;
+  }
+}
+
+.hero-left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  font-family: serif;
+  font-style: italic;
+}
+
+.hero-left p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.hero-button {
+  margin-top: 2rem;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero-right {
+  flex: 1;
+  position: relative;
+  background: #f8e5db;
+}
+
+.hero-image-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.circle-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid white;
+  z-index: 2;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
