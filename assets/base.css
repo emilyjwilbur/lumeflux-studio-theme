@@ -308,29 +308,32 @@ span.header-hamburger-bar {
 
   .header-sub-sub {
     position: absolute;
-    top: 0;
-    left: 100%;
-    margin-left: -1px; /* Prevent hover gap */
+    top: 100%;
+    left: 0;
+    width: 220px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     background: var(--bg-color);
     border-radius: 20px;
     padding: 20px;
-    width: 200px;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease;
     z-index: 1000;
   }
 
-  .header-sub-item:hover > .header-sub-sub,
-  .header-sub-sub:hover {
+  .header-sub-item.sub-sub-open > .header-sub-sub {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
   .header-sub-sub-toggle {
-    display: none;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: var(--text-color);
   }
 }

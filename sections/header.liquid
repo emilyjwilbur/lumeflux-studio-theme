@@ -83,6 +83,26 @@
           item.classList.toggle('active');
         });
       });
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth >= 1200) {
+          document.querySelectorAll(".header-sub-sub-toggle").forEach((toggle) => {
+            toggle.addEventListener("click", function (e) {
+              e.preventDefault();
+              const parentItem = toggle.closest(".header-sub-item");
+    
+              // Close others
+              document.querySelectorAll(".header-sub-item").forEach((item) => {
+                if (item !== parentItem) {
+                  item.classList.remove("sub-sub-open");
+                }
+              });
+    
+              // Toggle current
+              parentItem.classList.toggle("sub-sub-open");
+            });
+          });
+        }
+      });
       
 </script>
 {% schema %}
