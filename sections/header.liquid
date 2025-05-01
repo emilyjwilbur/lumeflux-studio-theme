@@ -1,41 +1,40 @@
 <div class="width">
     <div class="header-flex">
-      <!-- Logo (left) -->
+      <!-- Logo on the left -->
       <a href="/" class="header-logo">
         <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
       </a>
   
-      <!-- Hamburger (mobile only) -->
+      <!-- Hamburger for mobile -->
       <button class="header-hamburger" aria-label="Toggle menu">
         <span class="header-hamburger-bar"></span>
         <span class="header-hamburger-bar"></span>
         <span class="header-hamburger-bar"></span>
       </button>
   
-      <!-- Navigation (center) -->
-      <ul class="header-nav">
-        {% for link in section.settings.navigation.links %}
-          <li class="header-nav-item">
-            <a class="header-nav-anchor" href="{{ link.url }}">
-              {{ link.title }}
-            </a>
-            {% if link.links != blank %}
-              <ul class="header-sub">
-                {% for child in link.links %}
-                  <li class="header-sub-item">
-                    <a href="{{ child.url }}" class="header-sub-anchor">
-                      {{ child.title }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-  
-      <!-- Optional Login + Cart Buttons (right of nav) -->
+      <!-- Nav + Actions on the right -->
       <div class="header-actions">
+        <ul class="header-nav">
+          {% for link in section.settings.navigation.links %}
+            <li class="header-nav-item">
+              <a class="header-nav-anchor" href="{{ link.url }}">
+                {{ link.title }}
+              </a>
+              {% if link.links != blank %}
+                <ul class="header-sub">
+                  {% for child in link.links %}
+                    <li class="header-sub-item">
+                      <a href="{{ child.url }}" class="header-sub-anchor">
+                        {{ child.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+  
         {% if section.settings.show_login %}
           <a href="/account/login" class="header-action-link">Login</a>
         {% endif %}
@@ -45,7 +44,6 @@
       </div>
     </div>
   </div>
-  <div class="header-nav-overlay"></div>
 <div class="header-nav-overlay"></div>
 <style>
     .header{
