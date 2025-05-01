@@ -128,3 +128,19 @@ span.header-hamburger-bar {
   padding: 20px;
   color: var(--text-color);
 }
+.header-sub {
+  padding: 0 20px;
+  margin-top: 10px;
+}
+.header-sub-item {
+  & + & {
+    margin-top: 5px;
+  }
+}
+.header-sub-anchor {
+  color: var(--medium-text-color);
+  transition: 0.3s color;
+  &:hover {
+    color: var(--text-color);
+  }
+}
