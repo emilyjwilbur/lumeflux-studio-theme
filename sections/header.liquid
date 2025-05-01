@@ -8,20 +8,25 @@
                   <a class="header-nav-anchor" href="{{ link.url }}">{{ link.title }}</a>
                   {% if link.links != blank %}
                     <ul class="header-sub">
-                      {% for child in link.links %}
-                        <li class="header-sub-item">
-                          <a href="{{ child.url }}" class="header-sub-anchor">{{ child.title }}</a>
-                          {% if child.links != blank %}
-                            <ul class="header-sub-sub">
-                              {% for grandchild in child.links %}
-                                <li class="header-sub-sub-item">
-                                  <a href="{{ grandchild.url }}" class="header-sub-sub-anchor">{{ grandchild.title }}</a>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          {% endif %}
-                        </li>
-                      {% endfor %}
+                        {% for child in link.links %}
+                            <li class="header-sub-item">
+                              <a href="{{ child.url }}" class="header-sub-anchor">{{ child.title }}</a>
+                          
+                              {% if child.links != blank %}
+                                <!-- Only visible on mobile -->
+                                <button class="header-sub-sub-toggle" aria-label="Toggle sub menu"></button>
+                          
+                                <ul class="header-sub-sub">
+                                  {% for grandchild in child.links %}
+                                    <li class="header-sub-sub-item">
+                                      <a href="{{ grandchild.url }}" class="header-sub-sub-anchor">{{ grandchild.title }}</a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              {% endif %}
+                            </li>
+                          {% endfor %}
+                          
                     </ul>
                   {% endif %}
                 </li>
