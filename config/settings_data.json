@@ -190,7 +190,10 @@
           "padding": 24,
           "logo": "shopify://shop_images/Group_30.png",
           "logo_width": 100,
-          "navigation": "main-menu"
+          "navigation": "main-menu",
+          "header-sub": "#cad9d6",
+          "show_login": true,
+          "show_cart": true
         }
       },
       "hero": {
