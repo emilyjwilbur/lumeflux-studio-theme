@@ -3,27 +3,36 @@
       <!-- LEFT: Navigation -->
       <div class="header-left">
         <ul class="header-nav">
-          {% for link in section.settings.navigation.links %}
-            <li class="header-nav-item">
-              <a class="header-nav-anchor" href="{{ link.url }}">{{ link.title }}</a>
-              {% if link.links != blank %}
-                <ul class="header-sub">
-                  {% for child in link.links %}
-                    <li class="header-sub-item">
-                      <a href="{{ child.url }}" class="header-sub-anchor">{{ child.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
+            {% for link in section.settings.navigation.links %}
+                <li class="header-nav-item">
+                  <a class="header-nav-anchor" href="{{ link.url }}">{{ link.title }}</a>
+                  {% if link.links != blank %}
+                    <ul class="header-sub">
+                      {% for child in link.links %}
+                        <li class="header-sub-item">
+                          <a href="{{ child.url }}" class="header-sub-anchor">{{ child.title }}</a>
+                          {% if child.links != blank %}
+                            <ul class="header-sub-sub">
+                              {% for grandchild in child.links %}
+                                <li class="header-sub-sub-item">
+                                  <a href="{{ grandchild.url }}" class="header-sub-sub-anchor">{{ grandchild.title }}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
         </ul>
       </div>
   
       <!-- CENTER: Logo -->
       <div class="header-center">
         <a href="/" class="header-logo">
-          <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
+          <img width="" height="" src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
         </a>
       </div>
   
