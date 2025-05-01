@@ -140,6 +140,7 @@ span.header-hamburger-bar {
 .header-sub-anchor {
   color: var(--medium-text-color);
   transition: 0.3s color;
+  display: inline-block;
   &:hover {
     color: var(--text-color);
   }
