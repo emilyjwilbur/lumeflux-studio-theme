@@ -156,6 +156,7 @@ span.header-hamburger-bar {
   @media (min-width: 1200px) {
     border: none;
     padding: 0;
+    position: relative;
   }
 }
 .header-nav-anchor {
@@ -166,6 +167,16 @@ span.header-hamburger-bar {
 .header-sub {
   padding: 0 20px;
   margin-top: 15px;
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-color);
+    border-radius: 20px;
+    border: 1px solid black;
+  }
 }
 .header-sub-item {
   & + & {
