@@ -183,7 +183,7 @@ span.header-hamburger-bar {
     height: 12px; /* Control the height */
     border-right: 2px solid var(--text-color, #888); /* Thin caret, not solid black */
     border-top: 2px solid var(--text-color, #888); /* Same color for top border */
-    transform: rotate(90deg); /* Rotate the caret to make it point down */
+    transform: rotate(135deg); /* Rotate the caret to make it point down */
     transition: transform 0.3s ease;
     margin-left: 5px; /* Space between text and caret */
   }
