@@ -44,6 +44,7 @@
 @media screen and (min-width: 768px) {
   .hero-left {
     min-height: auto;
+    width: 80%;
   }
 }
 
