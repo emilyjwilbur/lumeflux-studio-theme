@@ -56,6 +56,11 @@ li {
     width: calc(100% - 80px);
   }
 }
+.hero {
+  background: black;
+  color: white;
+  padding: 200px 0;
+}
 
 /*HEADER*/
 .header {
