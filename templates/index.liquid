@@ -1,0 +1,31 @@
+
+{% layout 'theme' %} <!-- Inherits from the main theme.liquid layout -->
+{% section 'header'%}
+<!-- Hero Section -->
+{% section 'hero' %}
+
+<!-- Featured Collections -->
+<section class="featured-collections">
+  <h2>Featured Collections</h2>
+  {% for collection in collections %}
+    <div class="collection-item">
+      <h3>{{ collection.title }}</h3>
+      <a href="{{ collection.url }}">
+        <img width="" height="" src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+      </a>
+    </div>
+  {% endfor %}
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+  <h2>Featured Products</h2>
+  {% for product in collections.frontpage.products %}
+    <div class="product-item">
+      <h3>{{ product.title }}</h3>
+      <a href="{{ product.url }}">
+        <img width="" height="" src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+      </a>
+    </div>
+  {% endfor %}
+</section>
