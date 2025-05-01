@@ -1,6 +1,8 @@
 <section class="hero-overlap">
     <div class="hero-left">
-      <h1>{{ section.settings.heading }}</h1>
+        <h1 class="hero-heading" style="font-size: {% if section.settings.heading_font_size == 'small' %} 16px {% elsif section.settings.heading_font_size == 'medium' %} 24px {% else %} 32px {% endif %};">
+            {{ section.settings.heading }}
+          </h1>
       <p>{{ section.settings.subheading }}</p>
       <a href="{{ section.settings.button_link }}" class="hero-button">
         {{ section.settings.button_label }}
@@ -73,7 +75,27 @@
       "id": "button_label",
       "label": "Button Label",
       "default": "Shop ARMRA"
-    }
-  ]
-}
+    },
+    {
+        "type": "radio",
+        "id": "heading_font_size",
+        "label": "Heading Font Size",
+        "default": "medium",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
