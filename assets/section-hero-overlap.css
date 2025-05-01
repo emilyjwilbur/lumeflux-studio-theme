@@ -32,6 +32,7 @@
 
 .hero-left {
   flex: 1;
+  margin-right: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center; /* ✅ vertical centering */
@@ -44,7 +45,6 @@
 @media screen and (min-width: 768px) {
   .hero-left {
     min-height: auto;
-    width: 80%;
   }
 }
 
