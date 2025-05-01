@@ -77,9 +77,11 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 1;
+  height: 100vh; /* Full height of the viewport */
+  width: auto; /* Let it scale naturally */
+  object-fit: cover; /* Optional: crop if needed */
+  z-index: 0; /* Make sure it goes behind circle/text */
+  max-width: none;
 }
 
 .circle-wrapper {
