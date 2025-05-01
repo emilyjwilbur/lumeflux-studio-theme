@@ -8,11 +8,12 @@
  * ------------------------------------------------------------
  */
 {
+  "name": "Home page",
   "sections": {
-    "main": {
-      "type": "home",
+    "hero": {
+      "type": "hero",
       "settings": {}
     }
   },
-  "order": ["main"]
+  "order": ["hero"]
 }
