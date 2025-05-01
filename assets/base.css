@@ -247,3 +247,20 @@ span.header-hamburger-bar {
   font-weight: 500;
   color: var(--text-color);
 }
+@media (max-width: 1199px) {
+  .header-nav {
+    /* your existing mobile menu styles */
+  }
+
+  .header-action {
+    font-size: 18px;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .header-flex {
+    justify-content: space-between;
+  }
+}
