@@ -121,11 +121,11 @@ span.header-hamburger-bar {
 }
 
 .header-nav-item {
+  padding: 20px;
   border-bottom: 1px solid var(--border-color);
 }
 .header-nav-anchor {
   display: block;
-  padding: 20px;
   color: var(--text-color);
 }
 .header-sub {
