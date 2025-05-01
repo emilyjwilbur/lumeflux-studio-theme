@@ -201,7 +201,8 @@
           "circle_image": "shopify://shop_images/plufow-le-studio-zyaPg5b6M5I-unsplash.jpg",
           "right_image": "shopify://shop_images/two-hands-running-in-skincare-treatment.jpg",
           "button_link": "",
-          "button_label": "Shop ARMRA"
+          "button_label": "Shop ARMRA",
+          "heading_font_size": "large"
         }
       }
     },
