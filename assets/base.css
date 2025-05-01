@@ -71,7 +71,26 @@ li {
   align-items: center;
   justify-content: space-between;
 }
+.header-left,
+.header-right {
+  flex: 1; /* each gets equal larger space */
+  display: flex;
+  align-items: center;
+}
+.header-center {
+  flex: 0 0 auto; /* only as wide as content */
+  display: flex;
+  justify-content: center;
+}
+.header-left {
+  justify-content: flex-start;
+  gap: 40px;
+}
 
+.header-right {
+  justify-content: flex-end;
+  gap: 20px;
+}
 .header-logo {
   display: block;
 }
