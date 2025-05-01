@@ -9,26 +9,28 @@
         <span class="header-hamburger-bar"></span>
     </button>
 
+    {% assign menu = linklists[section.settings.navigation] %}
+
     <ul class="header-nav">
-        {% for link in section.settings.navigation.links %}
-            <li class="header-nav-item">
-                <a class="header-nav-anchor" href="{{link.url}}">
-            {{ link.title }}    
-            </a>
-        {%  if link.links != blank %}
+      {% for link in menu.links %}
+        <li class="header-nav-item">
+          <a class="header-nav-anchor" href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+    
+          {% if link.links != blank %}
             <ul class="header-sub">
-            {% for child in link.links %}
+              {% for child in link.links %}
                 <li class="header-sub-item">
-                    <a href="{{ child.url }}" class="header-sub-anchor">
-                        {{ child.title }}
-                    </a>
+                  <a href="{{ child.url }}" class="header-sub-anchor">
+                    {{ child.title }}
+                  </a>
                 </li>
-                {% endfor %}
+              {% endfor %}
             </ul>
-        {%  endif %}
-        
+          {% endif %}
         </li>
-            {% endfor %}
+      {% endfor %}
     </ul>
 </div>
 </div>
@@ -68,7 +70,7 @@
         "step": 5
       },
       {
-        "type": "link_list",
+        "type": "menu",
         "id": "navigation",
         "label": "Navigation menu",
         "default": "main-menu"
