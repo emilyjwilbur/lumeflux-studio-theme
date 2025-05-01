@@ -183,16 +183,9 @@ span.header-hamburger-bar {
     height: 12px; /* Control the height */
     border-right: 2px solid var(--text-color, #888); /* Thin caret, not solid black */
     border-top: 2px solid var(--text-color, #888); /* Same color for top border */
-    transform: rotate(45deg); /* Rotate the caret to make it point down */
+
     transition: transform 0.3s ease;
     margin-left: 5px; /* Space between text and caret */
-  }
-
-  /* Rotate the caret when hovered */
-  .header-nav-item:hover .caret {
-    transform: rotate(
-      -135deg
-    ); /* Rotate 180 degrees to make the caret point up */
   }
 }
 .header-nav-anchor {
