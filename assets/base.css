@@ -275,6 +275,8 @@ span.header-hamburger-bar {
 
   .header-action {
     font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
   }
 
   .header-actions {
