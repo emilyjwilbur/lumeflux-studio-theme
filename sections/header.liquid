@@ -125,10 +125,15 @@
 </style>
 
 <script>
-    document.querySelector('.header-hamburger').addEventListener('click', function() {
-        document.querySelector('.header').classList.toggle('nav-active');
-      });
-    
+// Hamburger toggle
+document.querySelector('.header-hamburger').addEventListener('click', function() {
+    document.querySelector('.header').classList.toggle('nav-active');
+  });
+  
+  // Close overlay when clicking outside the menu
+  document.querySelector('.header-nav-overlay').addEventListener('click', function() {
+    document.querySelector('.header').classList.remove('nav-active');
+  });
 </script>
 {% schema %}
 {
