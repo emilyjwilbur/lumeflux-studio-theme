@@ -1,9 +1,9 @@
 <div class="width">
     <section class="hero-overlap">
       <div class="hero-left">
-        <h1 id="hero-heading" class="hero-heading" 
+        <h1 class="hero-heading" 
             style="font-size: {% if section.settings.heading_font_size == 'small' %} 1rem {% elsif section.settings.heading_font_size == 'medium' %} 2.1rem {% else %} 3rem {% endif %};
-                   font-family: {{ section.settings.heading_font }};">
+                   font-family: {{ settings.heading_font }};">
             {{ section.settings.heading }}
         </h1>
         <p>{{ section.settings.subheading }}</p>
@@ -37,8 +37,8 @@
   </div>
   
   <style>
-    #hero-heading {
-        font-family: {{ section.settings.heading_font }};
+    .hero-heading {
+        font-family: {{ settings.heading_font | default: "Arial, sans-serif" }};
     }
 
   </style>
@@ -55,12 +55,6 @@
         "id": "heading",
         "label": "Heading",
         "default": "Radiant Skincare for Every Skin"
-      },
-      {
-        "type": "font_picker",
-        "id": "heading_font",
-        "label": "Heading Font",
-        "default":  "Arial, sans-serif"
       },
       
       {
