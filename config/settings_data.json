@@ -188,10 +188,10 @@
         "type": "header",
         "settings": {
           "padding": 24,
-          "logo": "shopify://shop_images/Group_30.png",
-          "logo_width": 100,
+          "logo": "shopify://shop_images/Group_31_copy_2.png",
+          "logo_width": 130,
           "navigation": "main-menu",
-          "header-sub": "#cad9d6",
+          "header-sub": "#8571d1",
           "show_login": true,
           "show_cart": true
         }

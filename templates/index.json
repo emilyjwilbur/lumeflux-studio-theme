@@ -12,12 +12,12 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "heading": "Radiant Skincare for Every Skin",
-        "subheading": "Glow Naturally with Lumeflux",
-        "circle_image": "shopify://shop_images/soapy-texture.jpg",
-        "right_image": "shopify://shop_images/two-hands-running-in-skincare-treatment.jpg",
+        "heading": "Feel the Difference, Wear the Quality",
+        "subheading": "Sustainable Styles for a Better Tomorrow",
+        "circle_image": "shopify://shop_images/valna-studio-mU88MlEFcoU-unsplash.jpg",
+        "right_image": "shopify://shop_images/stories-jrQv0161nNM-unsplash.jpg",
         "button_link": "",
-        "button_label": "Shop Lumeflux",
+        "button_label": "Shop All",
         "heading_font_size": "large"
       }
     }
