@@ -95,7 +95,7 @@ li {
 /* HAMBURGER */
 .header-hamburger {
   width: 32px;
-  height: 24px; /* Ensures visible height */
+  height: 24px;
   display: block;
   background: transparent;
   border: none;
@@ -105,7 +105,7 @@ li {
 }
 @media (max-width: 1199px) {
   .header-hamburger {
-    display: block; /* Ensure it's visible on mobile */
+    display: block; /* Ensures visibility on mobile */
   }
 }
 .header-hamburger-bar {
@@ -157,6 +157,28 @@ li {
 }
 .header.nav-active .header-nav {
   transform: translateX(0);
+}
+
+/* DESKTOP MENU */
+@media (min-width: 1200px) {
+  .header-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: auto;
+    max-width: none;
+    height: auto;
+    background: transparent;
+    transform: none;
+    overflow: visible;
+  }
+  .header-nav-overlay {
+    display: none; /* No overlay on desktop */
+  }
+  .header-hamburger {
+    display: none; /* Hide hamburger on desktop */
+  }
 }
 
 /* MENU ITEMS */
