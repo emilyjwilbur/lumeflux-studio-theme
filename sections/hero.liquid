@@ -1,8 +1,9 @@
 <div class="width">
     <section class="hero-overlap">
       <div class="hero-left">
-        <h1 class="hero-heading" style="font-size: {% if section.settings.heading_font_size == 'small' %} 1rem {% elsif section.settings.heading_font_size == 'medium' %} 2.1rem {% else %} 3rem {% endif %};">
-          {{ section.settings.heading }}
+        <h1 id="hero-heading" class="hero-heading" 
+            style="font-size: {% if section.settings.heading_font_size == 'small' %} 1rem {% elsif section.settings.heading_font_size == 'medium' %} 2.1rem {% else %} 3rem {% endif %};">
+            {{ section.settings.heading }}
         </h1>
         <p>{{ section.settings.subheading }}</p>
         <a href="{{ section.settings.button_link }}" class="hero-button">
@@ -34,6 +35,12 @@
     </section>
   </div>
   
+  <style>
+    #hero-heading {
+        font-family: {{ settings.heading_font }};
+    }
+
+  </style>
 
 
 
@@ -48,6 +55,13 @@
         "label": "Heading",
         "default": "Radiant Skincare for Every Skin"
       },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "Arial"
+      },
+      
       {
         "type": "textarea",
         "id": "subheading",
