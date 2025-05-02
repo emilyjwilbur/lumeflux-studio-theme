@@ -100,7 +100,7 @@ li {
   display: block;
   background: transparent;
   border: none;
-  z-index: 100;
+  z-index: 9999; /* Make sure it's on top */
 
   @media (min-width: 1200px) {
     display: none;
