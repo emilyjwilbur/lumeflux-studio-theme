@@ -65,6 +65,7 @@ li {
 /*HEADER*/
 .header {
   background: var(--bg-color);
+  border-bottom: 1 px solid var(--border-color);
 }
 .header-flex {
   display: flex;

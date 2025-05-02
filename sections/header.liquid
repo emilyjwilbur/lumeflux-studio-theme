@@ -66,21 +66,20 @@
     </div>
   </div>
   
-  
 <div class="header-nav-overlay"></div>
 <style>
-    .header{
-    padding: {{ section.settings.padding }}px 0;
-    background: #ffffff;
-    border-bottom:1px solid #000000;
-}
-.header-logo{
-    max-width: {{ section.settings.logo_width }}px;
-}
-.header-sub {
-    padding: 0 20px;
-    margin-top: 15px;
-  }
+    .header {
+        padding: {{ section.settings.padding }}px 0;
+        background: #ffffff;
+        border-bottom: {{ section.settings.border_bottom_size }}px solid {{ section.settings.border_bottom_color }};
+    }
+    .header-logo {
+        max-width: {{ section.settings.logo_width }}px;
+    }
+    .header-sub {
+        padding: 0 20px;
+        margin-top: 15px;
+    }
 
   /* For screens 1200px and above */
   @media (min-width: 1200px) {
@@ -95,11 +94,11 @@
       opacity: 0;
       left: -9999px;
       transition: left 0s 0.4s, opacity 0.4s;
-     
     }
   }
-   /* .header-sub-sub styling for desktop */
-   .header-sub-sub {
+
+  /* .header-sub-sub styling for desktop */
+  .header-sub-sub {
     position: absolute;
     top: 0;
     left: calc(100%); /* Position the sub-sub menu to the right of the parent */
@@ -120,37 +119,36 @@
     visibility: visible;
     pointer-events: auto;
   }
-}
 </style>
+
 <script>
     document.querySelector('.header-hamburger').addEventListener('click', () => {
         document.querySelector('.header').classList.toggle('nav-active');
-      });
-      document.querySelector('.header-nav-overlay').addEventListener('click', () => {
+    });
+    document.querySelector('.header-nav-overlay').addEventListener('click', () => {
         document.querySelector('.header').classList.remove('nav-active');
-      });
-      
-      document.addEventListener("DOMContentLoaded", function () {
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth >= 1200) {
-          document.querySelectorAll(".header-sub-sub-toggle").forEach((toggle) => {
-            toggle.addEventListener("click", function (e) {
-              e.preventDefault();
-              const parentItem = toggle.closest(".header-sub-item");
-    
-              // Close other open sub-sub-menus
-              document.querySelectorAll(".header-sub-item").forEach((item) => {
-                if (item !== parentItem) {
-                  item.classList.remove("sub-sub-open");
-                }
-              });
-    
-              // Toggle this one
-              parentItem.classList.toggle("sub-sub-open");
+            document.querySelectorAll(".header-sub-sub-toggle").forEach((toggle) => {
+                toggle.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const parentItem = toggle.closest(".header-sub-item");
+
+                    // Close other open sub-sub-menus
+                    document.querySelectorAll(".header-sub-item").forEach((item) => {
+                        if (item !== parentItem) {
+                            item.classList.remove("sub-sub-open");
+                        }
+                    });
+
+                    // Toggle this one
+                    parentItem.classList.toggle("sub-sub-open");
+                });
             });
-          });
         }
-      });
-      
+    });
 </script>
 {% schema %}
 {
@@ -167,6 +165,22 @@
         "max": 100,
         "step": 1
       },
+      {
+        "type": "range",
+        "id": "border_bottom_size",
+        "label": "Border Bottom Size (px)",
+        "default": 1,
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "type": "color",
+        "id": "border_bottom_color",
+        "label": "Border Bottom Color",
+        "default": "#000000"
+      },
+    
     {
     "type": "image_picker",
     "id": "logo",
