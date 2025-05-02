@@ -125,33 +125,39 @@
 </style>
 
 <script>
-    document.querySelector('.header-hamburger').addEventListener('click', () => {
-        document.querySelector('.header').classList.toggle('nav-active');
-    });
-    document.querySelector('.header-nav-overlay').addEventListener('click', () => {
-        document.querySelector('.header').classList.remove('nav-active');
-    });
-
     document.addEventListener("DOMContentLoaded", function () {
-        if (window.innerWidth >= 1200) {
-            document.querySelectorAll(".header-sub-sub-toggle").forEach((toggle) => {
-                toggle.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const parentItem = toggle.closest(".header-sub-item");
-
-                    // Close other open sub-sub-menus
-                    document.querySelectorAll(".header-sub-item").forEach((item) => {
-                        if (item !== parentItem) {
-                            item.classList.remove("sub-sub-open");
-                        }
-                    });
-
-                    // Toggle this one
-                    parentItem.classList.toggle("sub-sub-open");
-                });
-            });
+        const hamburger = document.querySelector(".header-hamburger");
+        const overlay = document.querySelector(".header-nav-overlay");
+        const header = document.querySelector(".header");
+    
+        if (hamburger && overlay && header) {
+          hamburger.addEventListener("click", () => {
+            header.classList.toggle("nav-active");
+          });
+    
+          overlay.addEventListener("click", () => {
+            header.classList.remove("nav-active");
+          });
         }
-    });
+    
+        if (window.innerWidth >= 1200) {
+          document.querySelectorAll(".header-sub-sub-toggle").forEach((toggle) => {
+            toggle.addEventListener("click", function (e) {
+              e.preventDefault();
+              const parentItem = toggle.closest(".header-sub-item");
+    
+              document.querySelectorAll(".header-sub-item").forEach((item) => {
+                if (item !== parentItem) {
+                  item.classList.remove("sub-sub-open");
+                }
+              });
+    
+              parentItem.classList.toggle("sub-sub-open");
+            });
+          });
+        }
+      });
+    
 </script>
 {% schema %}
 {
