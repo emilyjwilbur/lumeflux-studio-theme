@@ -189,10 +189,12 @@
         "type": "header",
         "settings": {
           "padding": 24,
+          "border_bottom_size": 1,
+          "border_bottom_color": "#000000",
           "logo": "shopify://shop_images/Group_31_copy_2.png",
           "logo_width": 130,
           "navigation": "main-menu",
-          "header-sub": "#8571d1",
+          "header-sub": "#ffffff",
           "show_login": true,
           "show_cart": true
         }
