@@ -10,6 +10,7 @@
 {
   "current": {
     "page_width": 1200,
+    "heading_font": "Montserrat, sans-serif",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
