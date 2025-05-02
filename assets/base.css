@@ -98,6 +98,9 @@ li {
 .header-hamburger {
   width: 32px;
   display: block;
+  background: transparent;
+  border: none;
+  z-index: 100;
 
   @media (min-width: 1200px) {
     display: none;
