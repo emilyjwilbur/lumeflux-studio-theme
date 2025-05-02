@@ -22,56 +22,83 @@
     ]
   },
   {
-    "name": "Colors",
-    "settings": [
+    "type": "select",
+    "id": "heading_font",
+    "label": "Heading Font",
+    "options": [
       {
-        "type": "color",
-        "id": "background_color",
-        "label": "Background Color",
-        "default": "#FFFFFF"
+        "value": "Arial, sans-serif",
+        "label": "Arial"
       },
       {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text Color",
-        "default": "#111111"
+        "value": "Helvetica Neue, sans-serif",
+        "label": "Helvetica Neue"
       },
       {
-        "type": "color",
-        "id": "medium-text_color",
-        "label": "Medium Text Color",
-        "default": "#5e5e5e"
+        "value": "Georgia, serif",
+        "label": "Georgia"
       },
       {
-        "type": "color",
-        "id": "border_color",
-        "label": "Border Color",
-        "default": "#dddddd"
+        "value": "Times New Roman, serif",
+        "label": "Times New Roman"
       },
       {
-        "type": "select",
-        "id": "heading_font",
-        "label": "Heading Font",
-        "options": [
-          {
-            "value": "Arial, sans-serif",
-            "label": "Arial"
-          },
-          {
-            "value": "Helvetica Neue, sans-serif",
-            "label": "Helvetica Neue"
-          },
-          {
-            "value": "Georgia, serif",
-            "label": "Georgia"
-          },
-          {
-            "value": "Times New Roman, serif",
-            "label": "Times New Roman"
-          }
-        ],
-        "default": "Arial, sans-serif"
+        "value": "Verdana, sans-serif",
+        "label": "Verdana"
+      },
+      {
+        "value": "Courier New, Courier, monospace",
+        "label": "Courier New"
+      },
+      {
+        "value": "Tahoma, sans-serif",
+        "label": "Tahoma"
+      },
+      {
+        "value": "Trebuchet MS, sans-serif",
+        "label": "Trebuchet MS"
+      },
+      {
+        "value": "Lucida Sans, sans-serif",
+        "label": "Lucida Sans"
+      },
+      {
+        "value": "Impact, sans-serif",
+        "label": "Impact"
+      },
+      {
+        "value": "Comic Sans MS, cursive, sans-serif",
+        "label": "Comic Sans MS"
+      },
+      {
+        "value": "Roboto, sans-serif",
+        "label": "Roboto"
+      },
+      {
+        "value": "Open Sans, sans-serif",
+        "label": "Open Sans"
+      },
+      {
+        "value": "Lora, serif",
+        "label": "Lora"
+      },
+      {
+        "value": "Merriweather, serif",
+        "label": "Merriweather"
+      },
+      {
+        "value": "Poppins, sans-serif",
+        "label": "Poppins"
+      },
+      {
+        "value": "Montserrat, sans-serif",
+        "label": "Montserrat"
+      },
+      {
+        "value": "Playfair Display, serif",
+        "label": "Playfair Display"
       }
-    ]
+    ],
+    "default": "Arial, sans-serif"
   }
 ]
