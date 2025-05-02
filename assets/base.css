@@ -66,6 +66,7 @@ li {
 .header {
   background: var(--bg-color);
   border-bottom: 1 px solid var(--border-color);
+  z-index: 9999;
 }
 .header-flex {
   display: flex;
@@ -100,7 +101,7 @@ li {
   display: block;
   background: transparent;
   border: none;
-  z-index: 9999; /* Make sure it's on top */
+  z-index: 100000; /* Make sure it's on top */
 
   @media (min-width: 1200px) {
     display: none;

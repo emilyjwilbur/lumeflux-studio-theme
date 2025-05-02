@@ -4,6 +4,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -37,7 +38,7 @@
   justify-content: center; /* ✅ vertical centering */
   align-items: flex-start; /* keep content left aligned */
   padding: 2rem;
-  z-index: 2;
+  z-index: 1;
   background: white;
   min-height: 100vh;
 }
@@ -78,7 +79,7 @@
   width: 100vw; /* full width */
   height: auto; /* scales naturally */
   object-fit: cover;
-  z-index: 1;
+  z-index: -1;
   display: block;
 }
 @media screen and (min-width: 768px) {
